@@ -15,3 +15,10 @@ standalone: move dist
 
 node_modules: # make a link to test
 	ln -s ../../jison-compiler/ebnf-parser/node_modules/test
+
+print: 
+	a2ps --columns=1 -f 8 -R lib/grammar.y  -o out.ps
+	#a2ps --columns=1 -f 8 -R aSb_anotado.js -o out.ps
+
+clean:
+	rm -f out.ps out.pdf dist/*
