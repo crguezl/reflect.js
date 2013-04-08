@@ -13,3 +13,5 @@ test: move dist
 standalone: move dist
 	node scripts/standalone.js | uglifyjs > standalone/reflect.js
 
+node_modules: # make a link to test
+	ln -s ../../jison-compiler/ebnf-parser/node_modules/test
